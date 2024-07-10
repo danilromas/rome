@@ -2,45 +2,44 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "montserrat";
+  font-family: "montserrat", sans-serif;
   color: #fff;
 }
 
-html,
-body {
+html, body {
   height: 100%;
-
   width: 100%;
 }
+
 *::selection {
-  background-color: #fff;
-  color: #640202;
+  background-color: #ffd700; /* Gold color for text selection */
+  color: #2b0000;
 }
 
 body::-webkit-scrollbar {
   display: block;
   width: 8px;
-  background: #640202;
+  background: #800000; /* Dark red scrollbar background */
 }
-body::-webkit-scrollbar-thumb {
-  background-color: #fff;
 
+body::-webkit-scrollbar-thumb {
+  background-color: #ffd700; /* Gold color for the scrollbar thumb */
   border-radius: 50px;
 }
+
 body {
   overflow-x: hidden;
 }
-#cursor {
 
+#cursor {
   height: 20px;
   width: 20px;
-  background-color: #640202;
+  background-color: #ffd700; /* Gold cursor */
   border-radius: 50%;
   position: fixed;
   z-index: 99;
   transition: all linear 0.1s;
-} 
-
+}
 
 #cursor-blur {
   height: 500px;
@@ -52,10 +51,10 @@ body {
   z-index: 9;
   transition: all linear 0.4s;
 }
+
 #nav {
   height: 130px;
   width: 100%;
-  /* background-color: red; */
   display: flex;
   align-items: center;
   padding: 0 120px;
@@ -64,15 +63,18 @@ body {
   justify-content: flex-start;
   z-index: 999;
 }
+
 #nav img {
   height: 4.5vw;
 }
+
 #nav h4 {
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;
   font-size: 1.15vw;
 }
+
 video {
   height: 100%;
   width: 100%;
@@ -96,37 +98,43 @@ video {
   flex-direction: column;
   text-align: center;
   z-index: 10;
+  color: #ffd700; /* Gold color for main headings */
 }
+
 #page1 h1 {
   font-size: 7.5vw;
   font-weight: 900;
   position: relative;
 }
+
 #page1 h1::before {
   content: "EAT. DRINK. PLAY.";
   position: absolute;
-  color: #000;
+  color: #2b0000; /* Dark maroon shadow for text */
   top: -5px;
   left: -5px;
-  -webkit-text-stroke: 1.5px #640202;
+  -webkit-text-stroke: 1.5px #ffd700;
   z-index: -1;
 }
+
 #page1 h2 {
   font-size: 30px;
   font-weight: 800;
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
 #page1 p {
   font-size: 1.2vw;
   font-weight: 500;
   width: 40%;
 }
+
 #page1 #arrow {
   height: 250px;
   width: 250px;
   background-color: transparent;
-  border: 2px solid #640202;
+  border: 2px solid #ffd700;
   position: absolute;
   display: flex;
   left: -2%;
@@ -136,14 +144,17 @@ video {
   border-radius: 50%;
   transition: all ease 0.5s;
 }
+
 #page1 #arrow i {
   font-size: 50px;
   font-weight: 100;
 }
+
 #page1 #arrow:hover {
   scale: 0.4;
-  background-color: #640202;
+  background-color: #ffd700; /* Gold color for the hover effect */
 }
+
 #page2 {
   min-height: 100vh;
   width: 100%;
@@ -151,16 +162,17 @@ video {
 }
 
 #scroller {
-  /* background-color: red; */
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   position: relative;
   z-index: 10;
 }
+
 #scroller::-webkit-scrollbar {
   display: none;
 }
+
 #scroller-in {
   display: inline-block;
   white-space: nowrap;
@@ -177,12 +189,13 @@ video {
   font-family: gilroy;
   margin-right: 20px;
   transition: all linear 0.3s;
-  color: #000;
-  -webkit-text-stroke: 2px #ffffff;
+  color: #800000; /* Dark red for scrolling text */
+  -webkit-text-stroke: 2px #ffd700;
 }
+
 #scroller h4:hover {
-  color: #640202;
-  -webkit-text-stroke: 2px #640202;
+  color: #ffd700;
+  -webkit-text-stroke: 2px #800000;
 }
 
 @keyframes scroll {
@@ -197,7 +210,6 @@ video {
 #about-us {
   height: 40vh;
   width: 100%;
-  /* background-color: red; */
   display: flex;
   padding: 0 50px;
   align-items: center;
@@ -205,28 +217,33 @@ video {
   z-index: 10;
   justify-content: space-around;
 }
+
 #about-us img {
   height: 220px;
   width: 220px;
   border-radius: 20px;
   object-fit: cover;
 }
+
 #about-us-in {
   width: 50%;
   text-align: center;
 }
+
 #about-us-in h3 {
   font-size: 54px;
   font-weight: 800;
   margin-bottom: 30px;
+  color: #ffd700; /* Gold color for headings */
 }
+
 #about-us-in p {
   font-size: 20px;
   line-height: 26px;
+  color: #ffd700; /* Gold color for paragraphs */
 }
 
 #cards-container {
-  /* background-color: red; */
   height: 60vh;
   display: flex;
   align-items: center;
@@ -235,49 +252,57 @@ video {
   position: relative;
   z-index: 10;
 }
+
 .card {
   height: 80%;
   width: 24%;
-  /* background-color: blue; */
   border-radius: 20px;
   background-size: cover;
   background-position: center;
   overflow: hidden;
   transition: all ease 0.6s;
 }
+
 #card1 {
   background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
 }
+
 #card2 {
   background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
 }
+
 #card3 {
   background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
 }
+
 .overlay {
   height: 100%;
   width: 100%;
-  background-color: #640202;
+  background-color: #800000;
   padding: 30px;
   padding-top: 160px;
   opacity: 0;
   transition: all ease 0.6s;
 }
+
 .overlay h4 {
-  color: #000;
+  color: #ffd700;
   font-size: 40px;
   text-transform: uppercase;
   white-space: nowrap;
   margin-bottom: 20px;
   font-weight: 800;
 }
+
 .overlay p {
-  color: #000;
+  color: #ffd700;
   font-size: 18px;
 }
+
 .card:hover .overlay {
   opacity: 1;
 }
+
 .card:hover {
   transform: rotate3d(-1, 1, 0, 20deg);
 }
@@ -287,18 +312,19 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: red; */
-  background: linear-gradient(to left bottom, #640202, #640202);
+  background: linear-gradient(to left bottom, #800000, #800000); /* Dark red background */
 }
+
 #green-div h4 {
   width: 45%;
   line-height: 50px;
-  color: #000;
+  color: #ffd700; /* Gold color for text */
   text-align: center;
   font-weight: 800;
   font-size: 27px;
   text-transform: uppercase;
 }
+
 #green-div img {
   width: 100%;
   height: auto;
@@ -308,12 +334,13 @@ video {
 #page3 {
   height: 100vh;
   width: 100%;
-  background-color: #000;
+  background-color: #2b0000; /* Dark maroon background */
   display: flex;
   align-items: center;
   position: relative;
   justify-content: center;
 }
+
 #page3 > p {
   font-size: 35px;
   font-weight: 700;
@@ -326,14 +353,17 @@ video {
   position: absolute;
   height: 60px;
 }
+
 #page3 #colon1 {
   left: 15%;
   top: 25%;
 }
+
 #page3 #colon2 {
   bottom: 30%;
   right: 15%;
 }
+
 #page4 {
   height: 30vh;
   width: 100%;
@@ -342,7 +372,9 @@ video {
   justify-content: center;
   gap: 70px;
   position: relative;
+  background-color: #2b0000;
 }
+
 .elem {
   height: 70%;
   width: 26%;
@@ -354,9 +386,9 @@ video {
 .elem h2 {
   height: 100%;
   width: 100%;
-  background-color: #640202;
+  background-color: #800000;
   display: flex;
-  color: #000;
+  color: #ffd700;
   font-weight: 800;
   align-items: center;
   justify-content: center;
@@ -365,6 +397,7 @@ video {
   position: absolute;
   z-index: 10;
 }
+
 .elem img {
   height: 100%;
   width: 100%;
@@ -372,26 +405,30 @@ video {
   transition: all ease 0.5s;
   scale: 1.1;
 }
+
 .elem:hover h2 {
-  color: #fff;
-  background-color: transparent;
+  color: #800000;
+  background-color: #ffd700;
 }
+
 .elem:hover img {
   scale: 1;
 }
+
 #page4 h1 {
   font-size: 6.4vw;
   position: absolute;
   top: -15%;
   font-weight: 900;
   font-family: gilroy;
-  color: #000;
-  -webkit-text-stroke: 2px #fff;
+  color: #ffd700;
+  -webkit-text-stroke: 2px #800000;
 }
+
 #footer {
   height: 40vh;
   width: 100%;
-  background: linear-gradient(to left bottom, #640202 0%, #640202 80%);
+  background: linear-gradient(to left bottom, #800000 0%, #800000 80%); /* Dark red gradient */
   position: relative;
   display: flex;
   align-items: center;
@@ -399,29 +436,29 @@ video {
   gap: 6.5vw;
   padding: 0 100px;
 }
+
 #footer > img {
   position: absolute;
   left: 0;
   height: 100%;
   z-index: 0;
 }
+
 #f1 img {
   height: 100px;
 }
-#f1,
-#f2,
-#f3,
-#f4 {
+
+#f1, #f2, #f3, #f4 {
   width: fit-content;
   position: relative;
   z-index: 99;
-  /* background-color: red; */
 }
+
 #f2 h3 {
   font-size: 1.6vw;
   white-space: nowrap;
   text-transform: uppercase;
-  color: #000;
+  color: #ffd700;
   font-weight: 900;
   margin-bottom: 8px;
 }
@@ -430,126 +467,154 @@ video {
   font-size: 1.6vw;
   white-space: nowrap;
   text-transform: uppercase;
-  color: #000;
+  color: #ffd700;
   font-weight: 800;
   margin-bottom: 8px;
 }
+
 #f4 h4 {
   font-size: 1vw;
   white-space: nowrap;
   text-transform: uppercase;
-  color: #000;
+  color: #ffd700;
   font-weight: 600;
   line-height: 20px;
   margin-bottom: 8px;
 }
-
 
 @media (max-width: 768px) {
   #nav {
     padding: 0 20px;
     justify-content: space-between;
   }
+
   #nav h4 {
     font-size: 3.5vw;
   }
+
   video {
     object-fit: cover;
   }
+
   #page1 h1 {
     font-size: 10vw;
   }
+
   #page1 h2 {
     font-size: 5vw;
   }
+
   #page1 p {
     width: 90%;
     font-size: 4vw;
   }
+
   #page1 #arrow {
     height: 100px;
     width: 100px;
   }
+
   #page1 #arrow i {
     font-size: 25px;
   }
+
   #scroller h4 {
     font-size: 60px;
   }
+
   #about-us {
     flex-direction: column;
     padding: 0 20px;
   }
+
   #about-us img {
     height: 150px;
     width: 150px;
   }
+
   #about-us-in {
     width: 100%;
     text-align: center;
     margin-top: 20px;
   }
+
   #about-us-in h3 {
     font-size: 7vw;
   }
+
   #about-us-in p {
     font-size: 4vw;
   }
+
   #cards-container {
     flex-direction: column;
     height: auto;
     gap: 30px;
   }
+
   .card {
     width: 80%;
     height: 200px;
   }
+
   .overlay h4 {
     font-size: 30px;
   }
+
   .overlay p {
     font-size: 14px;
   }
+
   #green-div {
     flex-direction: column;
     text-align: center;
   }
+
   #green-div h4 {
     font-size: 5vw;
     width: 90%;
     line-height: normal;
   }
+
   #green-div img {
     width: 50%;
     height: auto;
   }
+
   #page3 p {
     font-size: 4vw;
     width: 90%;
   }
+
   #page4 {
     flex-direction: column;
     gap: 20px;
   }
+
   #page4 h1 {
     font-size: 10vw;
     top: -10%;
   }
+
   .elem {
     width: 80%;
     height: 150px;
   }
+
   .elem h2 {
     font-size: 4vw;
   }
+
   #footer {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
   }
+
   #f2 h3, #f3 h3 {
     font-size: 4vw;
   }
+
   #f4 h4 {
     font-size: 3vw;
   }
