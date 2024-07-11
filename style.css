@@ -64,8 +64,15 @@ body {
   z-index: 999;
 }
 
+
+
 #nav img {
-  height: 4.5vw;
+  height: 6.5vw;
+}
+
+
+#nav h4 img {
+  height: 3.5vw;
 }
 
 #nav h4 {
@@ -130,27 +137,40 @@ video {
   width: 40%;
 }
 
-#page1 #arrow {
+#page1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+#arrow-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.arrow {
   height: 250px;
   width: 250px;
   background-color: transparent;
   border: 2px solid #ffd700;
-  position: absolute;
+  border-radius: 50%;
+  margin: 0 10px; /* Adjust margin between arrows */
   display: flex;
-  left: -2%;
-  bottom: 0%;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   transition: all ease 0.5s;
 }
 
-#page1 #arrow i {
-  font-size: 50px;
-  font-weight: 100;
+.arrow img {
+  width: 80px; /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
 }
 
-#page1 #arrow:hover {
+#page1 .arrow:hover {
   scale: 0.4;
   background-color: #ffd700; /* Gold color for the hover effect */
 }
@@ -264,15 +284,15 @@ video {
 }
 
 #card1 {
-  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+  background-image: url(./Assests/card1.avif);
 }
 
 #card2 {
-  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+  background-image: url(./Assests/card2.webp);
 }
 
 #card3 {
-  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+  background-image: url(./Assests/card3.avif);
 }
 
 .overlay {
@@ -438,6 +458,7 @@ video {
 }
 
 #footer > img {
+  
   position: absolute;
   left: 0;
   height: 100%;
@@ -445,7 +466,7 @@ video {
 }
 
 #f1 img {
-  height: 100px;
+  height: 8.5vw;
 }
 
 #f1, #f2, #f3, #f4 {
@@ -488,6 +509,15 @@ video {
     justify-content: space-between;
   }
 
+  #nav img {
+    height: 100px;
+  }
+  
+  
+  #nav h4 img {
+    height: 40px;
+  }
+
   #nav h4 {
     font-size: 3.5vw;
   }
@@ -509,15 +539,43 @@ video {
     font-size: 4vw;
   }
 
-  #page1 #arrow {
-    height: 100px;
-    width: 100px;
+  #page1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
   }
-
-  #page1 #arrow i {
-    font-size: 25px;
+  
+  #arrow-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Регулировка отступа при необходимости */
   }
-
+  
+  .arrow {
+    height: 100px; /* Уменьшаем высоту блока для мобильной версии */
+    width: 100px; /* Уменьшаем ширину блока для мобильной версии */
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    border-radius: 50%;
+    margin: 0 10px; /* Расстояние между блоками для мобильной версии */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+  }
+  
+  .arrow img {
+    width: 50px; /* Уменьшаем ширину изображения для мобильной версии */
+    height: auto; /* Сохраняем пропорции */
+  }
+  
+  #page1 .arrow:hover {
+    transform: scale(0.9); /* Уменьшаем размер при наведении для мобильной версии */
+    background-color: #ffd700; /* Цвет фона при наведении */
+  }
   #scroller h4 {
     font-size: 60px;
   }
@@ -577,8 +635,8 @@ video {
   }
 
   #green-div img {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
 
   #page3 p {
@@ -587,35 +645,73 @@ video {
   }
 
   #page4 {
-    flex-direction: column;
-    gap: 20px;
+    height: auto; /* Высота будет автоматически регулироваться контентом */
+    padding: 50px 20px; /* Уменьшаем внутренний отступ для контента */
+    background-color: #2b0000;
   }
 
-  #page4 h1 {
-    font-size: 10vw;
-    top: -10%;
-  }
-
+  
+  
   .elem {
-    width: 80%;
-    height: 150px;
+    height: auto; /* Автоматическая высота для элементов */
+    width: 100%; /* Занимать всю ширину */
+    margin-bottom: 30px; /* Расстояние между элементами */
+    border-radius: 20px;
+    position: relative;
   }
-
+  
   .elem h2 {
-    font-size: 4vw;
+    height: auto; /* Автоматическая высота */
+    width: 100%;
+    font-size: 5vw; /* Уменьшаем размер шрифта */
+  }
+  
+  .elem img {
+    height: auto; /* Автоматическая высота */
+    width: 100%;
+  }
+  
+  .elem:hover h2 {
+    background-color: #ffd700; /* Цвет фона при наведении */
+  }
+  
+  .elem:hover img {
+    transform: scale(1); /* Увеличение при наведении */
   }
 
   #footer {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    height: auto; /* Высота будет автоматически регулироваться контентом */
+    padding: 50px 20px; /* Уменьшаем внутренний отступ для контента */
+    background: linear-gradient(to left bottom, #800000 0%, #800000 80%);
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: center; /* Выравнивание по центру */
+    text-align: center; /* Выравнивание текста по центру */
   }
-
-  #f2 h3, #f3 h3 {
-    font-size: 4vw;
+  
+  #footer > img {
+    display: none; /* Скрываем фоновое изображение */
   }
-
+  
+  #f1, #f2, #f3, #f4 {
+    width: 100%; /* Занимать всю ширину */
+    margin-bottom: 30px; /* Расстояние между элементами */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+  
+  #f2 h3 {
+    font-size: 4vw; /* Уменьшаем размер шрифта */
+    margin-bottom: 10px; /* Увеличиваем расстояние между элементами */
+  }
+  
+  #f3 h3 {
+    font-size: 3.5vw; /* Уменьшаем размер шрифта */
+    font-weight: 800; /* Увеличиваем жирность шрифта */
+    margin-bottom: 10px; /* Увеличиваем расстояние между элементами */
+  }
+  
   #f4 h4 {
-    font-size: 3vw;
+    font-size: 2vw; /* Уменьшаем размер шрифта */
+    line-height: 1.2; /* Увеличиваем межстрочный интервал */
+    margin-bottom: 10px; /* Увеличиваем расстояние между элементами */
   }
 }
