@@ -101,13 +101,13 @@ video {
 
 
 #page1 h1 {
-  font-size: 4.5vw;
+  font-size: 3.5vw;
   font-weight: 900;
   position: relative;
 }
 
 #page1 h1::before {
-  content: "SOL. POPULUSQUE. ROMANUS.";
+  content: "SOL. POPULUS. QUIRITIUM. ROMANUS.";
   position: absolute;
   color: #2b0000; /* Dark maroon shadow for text */
   top: -5px;
@@ -245,7 +245,7 @@ video {
 #about-us-in h3 {
   font-size: 54px;
   font-weight: 800;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   color: #ffd700; /* Gold color for headings */
 }
 
